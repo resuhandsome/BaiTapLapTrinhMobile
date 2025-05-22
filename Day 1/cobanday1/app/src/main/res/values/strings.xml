@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">cobanday1</string>
+    <string name="backButton" translatable="false">Back</string>
+    <string name="editButton" translatable="false">Edit</string>
+</resources>
