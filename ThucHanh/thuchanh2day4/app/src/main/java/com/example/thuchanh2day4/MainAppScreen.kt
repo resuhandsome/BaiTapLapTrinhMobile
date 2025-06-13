@@ -15,6 +15,6 @@ fun MainAppScreen(navController: NavController) {
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        Text("hello i'm Ngô Trương Tín", fontSize = 24.sp)
+        Text("hello, i'm Ngô Trương Tín", fontSize = 24.sp)
     }
 }
