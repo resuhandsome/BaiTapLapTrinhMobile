@@ -41,7 +41,6 @@ fun LoginScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            // SỬ DỤNG LOGO CỦA BẠN
             Image(
                 painter = painterResource(id = R.drawable.logouth),
                 contentDescription = "UTH Logo",
