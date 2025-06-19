@@ -71,14 +71,14 @@ fun LoginScreen(
             )
         }
 
-        // Thay đổi nút đăng nhập để hiển thị loading
+
         Button(
             onClick = onSignInClick,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 32.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4285F4)),
-            enabled = !state.isSignInSuccessful // Vô hiệu hóa nút khi đang đăng nhập
+            enabled = !state.isSignInSuccessful
         ) {
             if (state.isSignInSuccessful) {
                 CircularProgressIndicator(
@@ -87,10 +87,10 @@ fun LoginScreen(
                 )
             } else {
                 Icon(
-                    painter = painterResource(id = R.drawable.ic_google), // Sẽ tạo icon này ở bước 5
+                    painter = painterResource(id = R.drawable.ic_google),
                     contentDescription = "Google Icon",
                     modifier = Modifier.size(24.dp),
-                    tint = Color.Unspecified // Không tô màu cho icon gốc
+                    tint = Color.Unspecified
                 )
                 Spacer(modifier = Modifier.width(16.dp))
                 Text(text = "SIGN IN WITH GOOGLE", color = Color.White)
