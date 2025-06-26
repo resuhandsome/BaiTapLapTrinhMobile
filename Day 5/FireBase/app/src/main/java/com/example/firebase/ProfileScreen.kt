@@ -27,7 +27,8 @@ fun ProfileScreen(
     name: String?,
     email: String?,
     photoUrl: String?,
-    onSignOut: () -> Unit
+    onSignOut: () -> Unit,
+    onNavigateBack: () -> Unit
 ) {
     var selectedDate by remember { mutableStateOf("01/11/2005") }
     var showDatePicker by remember { mutableStateOf(false) }
@@ -37,8 +38,8 @@ fun ProfileScreen(
             TopAppBar(
                 title = { Text("Profile") },
                 navigationIcon = {
-                    IconButton(onClick = onSignOut) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Sign Out")
+                    IconButton(onClick = onNavigateBack) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 }
             )
@@ -78,11 +79,15 @@ fun ProfileScreen(
             Divider()
             Spacer(modifier = Modifier.weight(1f))
 
+            // nút đăng xuất
             Button(
                 onClick = onSignOut,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Red
+                        )
             ) {
-                Text("Back")
+                Text("Sign Out")
             }
         }
     }
